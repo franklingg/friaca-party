@@ -12,6 +12,7 @@ import { FaSnowman, FaSnowboarding } from 'react-icons/fa';
 import { GiIceCube, GiIcePop, GiIceberg } from 'react-icons/gi';
 import { RiFridgeFill, RiGithubFill } from 'react-icons/ri';
 
+// eslint-disable-next-line react/jsx-key
 const icons = [<BsSnow />, <BsThermometerSnow />, <BsCloudSnowFill />, <FaSnowman />, <FaSnowboarding/>, <GiIceCube/>, <GiIcePop/>, <GiIceberg/>, <RiFridgeFill/>];
 
 export default function Index() {
