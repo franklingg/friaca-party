@@ -11,11 +11,12 @@ export default class Mydocument extends Document {
           <meta name="distribution" content="global" />
 
           <meta name="country" content="BR" />
+          <meta name="description" content="Confirmação de presença na Friaca Party" />
 
           <meta httpEquiv="Content-Style-Type" content="text/css" />
           <meta httpEquiv="Content-Script-Type" content="text/javascript" />
           <link rel="manifest" href="/manifest.json"></link>
-          <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
+          <link rel="icon" type="image/x-icon" href="/favicon.png"></link>
         </Head>
         <body>
           <Main />
