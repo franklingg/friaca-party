@@ -162,7 +162,7 @@ export default function Index() {
 
       <a className={styles.home__ref} href="https://github.com/franklingg" target="_blank" rel="noreferrer">
         <RiGithubFill />
-        <span>Developed by <br /> Franklin Regis</span>
+        <span>Desenvolvido por <br /> Franklin Regis</span>
       </a>
     </main>
   );
