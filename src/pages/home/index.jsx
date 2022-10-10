@@ -95,7 +95,7 @@ export default function Index() {
         <div className={styles.right__when}>
           <p className={styles.right__when__date}>16<br/><span>OUT</span></p>
           <span className="hollow">AS</span>
-          <p className={styles.right__when__time}>17<span>H</span></p>
+          <p className={styles.right__when__time}>14<span>H</span></p>
         </div>
         <a href="https://www.google.com.br/maps/place/Casa+das+Poc+Produções+Criativas/@-3.7444096,-38.5428548,17z/data=!3m1!4b1!4m5!3m4!1s0x7c7490eac820b21:0x7bda151c5e7d98f0!8m2!3d-3.7444091!4d-38.5406554" 
           className={styles.right__where}
