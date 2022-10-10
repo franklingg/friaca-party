@@ -11,6 +11,7 @@ import { BsSnow, BsThermometerSnow, BsCloudSnowFill, BsFillVolumeMuteFill, BsFil
 import { FaSnowman, FaSnowboarding } from 'react-icons/fa';
 import { GiIceCube, GiIcePop, GiIceberg } from 'react-icons/gi';
 import { RiFridgeFill, RiGithubFill } from 'react-icons/ri';
+import { CgArrowsExchangeAlt } from 'react-icons/cg';
 
 // eslint-disable-next-line react/jsx-key
 const icons = [<BsSnow />, <BsThermometerSnow />, <BsCloudSnowFill />, <FaSnowman />, <FaSnowboarding/>, <GiIceCube/>, <GiIcePop/>, <GiIceberg/>, <RiFridgeFill/>];
@@ -92,6 +93,13 @@ export default function Index() {
         <div className={styles.right__title}>
           <Image src={Logo} alt="Logotipo da Friaca Party" />
         </div>
+        <div className={styles.right__lineup}>
+          <p>DJ Silas</p>
+          <BsSnow />
+          <p>Trio <span>Cold</span></p>
+          <BsSnow />
+          <p>Victor Hugo</p>
+        </div>
         <div className={styles.right__when}>
           <p className={styles.right__when__date}>16<br/><span>OUT</span></p>
           <span className="hollow">AS</span>
@@ -118,9 +126,9 @@ export default function Index() {
               <button onClick={saveGuest}>Confirmar</button>
             </> :
             <h2>
-              Presença confirmada!<br/>
-              Quem faltar deu pro <br/>
-              Bolsonaro
+              Presença confirmada.<br/>
+              Quem faltar vai levar <br/>
+              paulada!!
             </h2>
           }
         </div>

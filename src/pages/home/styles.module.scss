@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    gap: 7vw;
 }
 
 .home > * {
@@ -16,14 +16,34 @@
 .right {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
     align-items: center;
+    gap: 2vh;
 }
 
 .right__title {
     position: relative;
     width: 30vw;
     margin-top: -12vh;
+}
+
+.right__lineup {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: -5vh;
+    gap: 0.5vw;
+    margin-bottom: 5vh;
+    color: var(--light-blue);
+    vertical-align: middle;
+
+    span {
+        color: var(--blue);
+    }
+
+    svg {
+        margin-bottom: 4px;
+    }
 }
 
 .right__when {
@@ -197,7 +217,7 @@
     background: var(--light-blue);
     border: none;
     border-radius: 50%;
-    padding: 6px;
+    padding: 4px 5px;
     cursor: pointer;
 
     svg {
