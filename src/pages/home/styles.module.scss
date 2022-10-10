@@ -270,6 +270,10 @@
         width: 100vw;
     }
 
+    .right__lineup {
+        flex-direction: column;
+    }
+
     .right__when, .right__where {
         gap: 2.5vw;
         transform: scale(1.15);
