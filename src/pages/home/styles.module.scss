@@ -122,7 +122,12 @@
 }
 
 .left__confirmation__submitted{
-    padding: 3vw;
+    flex-direction: row;
+
+    video {
+        max-height: 40vh;
+        border-radius: 10px;
+    }
 }
 
 .left__inputs{
@@ -306,7 +311,13 @@
     }
 
     .left__confirmation__submitted{
-        padding: 6vw;
+        flex-direction: column;
+        padding: 3vh 12vw;
+
+        video {
+            max-height: 45vh;
+            border-radius: 10px;
+        }
     }
 
     .left__guestIcon {

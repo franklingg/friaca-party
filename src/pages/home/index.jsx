@@ -22,6 +22,7 @@ export default function Index() {
   const [instagram, setInstagram] = useState('');
   const [guests, setGuests] = useState([]);
   const songRef = createRef();
+  const videoRef = createRef();
   const [isPlaying, setIsPlaying] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [lottieOptions, setLottieOptions] = useState({});
@@ -71,7 +72,7 @@ export default function Index() {
     } catch (err) {
       alert(err)
     }
-  }, [name, instagram]);
+  }, [name, instagram, videoRef]);
 
   const changeInstagram = useCallback((e) => {
     const newIg = e.target.value;
@@ -125,11 +126,12 @@ export default function Index() {
               </div>
               <button onClick={saveGuest}>Confirmar</button>
             </> :
-            <h2>
-              Presença confirmada.<br/>
-              Quem faltar vai levar <br/>
-              paulada!!
-            </h2>
+            <>
+              <h2>Presença<br/>confirmada!</h2>
+              <video ref={videoRef} autoPlay>
+                <source src="Confirmed.mp4" type="video/mp4" />
+              </video>
+            </>
           }
         </div>
 
