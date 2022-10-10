@@ -152,8 +152,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2vh;
-    max-width: 450px;
-    min-width: 400px;
+    max-width: 35vw;
 
     h2 {
         font-size: 2rem;
@@ -304,10 +303,13 @@
     }
 
     .left__confirmed {
-        max-width: 85vw;
-        
+
+        max-width: 87vw;
+
         table {
             max-height: 30vh;
+            min-width: none;
+            max-width: 87vw;
         }
     }
 
@@ -322,7 +324,7 @@
     }
 
     .left__guestIcon {
-        width: 3vw;
+        width: 2vw;
         padding-right: 1vw;
     }
 
