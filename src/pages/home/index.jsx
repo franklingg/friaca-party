@@ -92,24 +92,24 @@ export default function Index() {
         height='100%'
         style={{ position: 'absolute', zIndex: 0 }}
       />
-      <div className={styles.right}>
-        <div className={styles.right__title}>
+      <div className={styles.left}>
+        <div className={styles.left__title}>
           <Image src={Logo} alt="Logotipo da Friaca Party" />
         </div>
-        <div className={styles.right__lineup}>
+        <div className={styles.left__lineup}>
           <p>DJ Silas</p>
           <BsSnow />
           <p>Trio <span>Cold</span></p>
           <BsSnow />
           <p>Victor Hugo</p>
         </div>
-        <div className={styles.right__when}>
-          <p className={styles.right__when__date}>15<br/><span>JAN</span></p>
+        <div className={styles.left__when}>
+          <p className={styles.left__when__date}>15<br/><span>JAN</span></p>
           <span className="hollow">AS</span>
-          <p className={styles.right__when__time}>15<span>H</span></p>
+          <p className={styles.left__when__time}>15<span>H</span></p>
         </div>
         <a href="https://www.google.com.br/maps/place/Casa+das+Poc+Produções+Criativas/@-3.7444096,-38.5428548,17z/data=!3m1!4b1!4m5!3m4!1s0x7c7490eac820b21:0x7bda151c5e7d98f0!8m2!3d-3.7444091!4d-38.5406554" 
-          className={styles.right__where}
+          className={styles.left__where}
           target="_blank"
           rel='noreferrer'
         >
@@ -117,12 +117,12 @@ export default function Index() {
         </a>
       </div>
 
-      <div className={styles.home__left}>
-        <div className={`${styles.left__confirmation} ${submitted ? styles.left__confirmation__submitted : ""}`}>
+      <div className={styles.home__right}>
+        <div className={`${styles.right__confirmation} ${submitted ? styles.right__confirmation__submitted : ""}`}>
           {!submitted ? 
             <>
               <h2>Confirme sua presença, boiola</h2>
-              <div className={styles.left__inputs}>
+              <div className={styles.right__inputs}>
                 <input placeholder='Nome' value={name} onChange={(e) => setName(e.target.value)} />
                 <input placeholder='Instagram' value={instagram} onChange={changeInstagram} />
               </div>
@@ -137,16 +137,16 @@ export default function Index() {
           }
         </div>
 
-        <div className={styles.left__confirmed}>
+        <div className={styles.right__confirmed}>
           <h2>Presenças confirmadas no <br /><span>Frozen Carpet</span></h2>
           <table>
             {guests.map((guest, idx) =>
               <>
-                <tr className={styles.left__guestIcon}>
+                <tr className={styles.right__guestIcon}>
                   {React.cloneElement(icons[Math.floor(Math.random()*icons.length)], {key: idx})}
                 </tr>
-                <tr className={styles.left__guestName}>{guest.name}</tr>
-                <tr className={styles.left__guestInstagram}>
+                <tr className={styles.right__guestName}>{guest.name}</tr>
+                <tr className={styles.right__guestInstagram}>
                   {guest.instagram ?
                     <a href={`http://www.instagram.com/${guest.instagram.replace(" ", "")}/`} target="_blank" rel="noreferrer">
                       {guest.instagram.startsWith("@") ? guest.instagram : `@${guest.instagram}`}</a> :

@@ -13,20 +13,21 @@
     z-index: 1;
 }
 
-.right {
+.left {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2vh;
 }
 
-.right__title {
+.left__title {
     position: relative;
     width: 30vw;
     margin-top: -12vh;
+    margin-bottom: 3vh;
 }
 
-.right__lineup {
+.left__lineup {
     display: flex;
     align-items: center;
     color: white;
@@ -46,7 +47,7 @@
     }
 }
 
-.right__when {
+.left__when {
     display: flex;
     align-items: center;
     gap: 1.2vw;
@@ -60,7 +61,7 @@
     }
 }
 
-.right__when__date {
+.left__when__date {
     line-height: 1.7rem;
     span {
         color: var(--blue);
@@ -68,28 +69,28 @@
     }
 }
 
-.right__when__time {
+.left__when__time {
     span {
         color: var(--blue);
         font-size: 2.5rem;
     }
 }
 
-.right__where {
+.left__where {
     color: var(--light);
     text-align: center;
     font-size: 1.6rem;
     text-decoration: none;
 }
 
-.home__left {
+.home__right {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4vh;
 }
 
-.left__confirmation{
+.right__confirmation{
     background: linear-gradient(239.94deg, var(--light-brown) 10.45%, var(--light-brown) 69.95%);
     font-family: Poppins;
     padding: 2vw;
@@ -121,7 +122,7 @@
     }
 }
 
-.left__confirmation__submitted{
+.right__confirmation__submitted{
     flex-direction: row;
 
     video {
@@ -130,7 +131,7 @@
     }
 }
 
-.left__inputs{
+.right__inputs{
     display: flex;
     gap: 1vw;
 
@@ -143,7 +144,7 @@
     }
 }
 
-.left__confirmed{
+.right__confirmed{
     font-family: Poppins;
     background-color: var(--blue);
     padding: 15px;
@@ -197,19 +198,19 @@
     }
 }
 
-.left__guestName, .left__guestInstagram{
+.right__guestName, .right__guestInstagram{
     border-bottom: 1px solid var(--light-blue);
     margin: 0 5px;
     padding: 7px 5px;
     font-size: 1.4rem;
 }
   
-.left__guestInstagram > a{
+.right__guestInstagram > a{
     font-weight: 700;
     color: var(--blue);
 }
   
-.left__guestIcon {
+.right__guestIcon {
     padding-top: 5px;
     width: 1.3vw;
     color: var(--light-blue);
@@ -267,25 +268,25 @@
         overflow-y: scroll;
     }
 
-    .right {
+    .left {
         gap: 3vh;
     }
 
-    .right__title {
+    .left__title {
         margin-top: 70vh;
         width: 100vw;
     }
 
-    .right__lineup {
+    .left__lineup {
         flex-direction: column;
     }
 
-    .right__when, .right__where {
+    .left__when, .left__where {
         gap: 2.5vw;
         transform: scale(1.15);
     }
 
-    .left__confirmation {
+    .right__confirmation {
 
         padding: 3vh 3vw;
         max-width: 85vw;
@@ -298,12 +299,12 @@
         }
     }
 
-    .left__inputs{
+    .right__inputs{
         flex-direction: column;
         gap: 1.5vh;
     }
 
-    .left__confirmed {
+    .right__confirmed {
 
         max-width: 87vw;
 
@@ -314,7 +315,7 @@
         }
     }
 
-    .left__confirmation__submitted{
+    .right__confirmation__submitted{
         flex-direction: column;
         padding: 3vh 12vw;
 
@@ -324,7 +325,7 @@
         }
     }
 
-    .left__guestIcon {
+    .right__guestIcon {
         width: 2vw;
         padding-right: 1vw;
     }
