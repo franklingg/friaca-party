@@ -5,13 +5,14 @@ import { collection, query, orderBy, onSnapshot, addDoc, Timestamp } from 'fireb
 import { db } from '~/service/firebase';
 import * as snowAnimation from '~/assets/animations/let-it-snow.json';
 import * as narrowSnowAnimation from '~/assets/animations/snowfall.json';
-import Logo from '~/assets/img/logo.svg';
+import * as leavesAnimation from '~/assets/animations/leaves.json';
+// import Logo from '~/assets/img/logo.svg';
+import Logo from '~/assets/img/logo.png';
 import Image from 'next/image';
 import { BsSnow, BsThermometerSnow, BsCloudSnowFill, BsFillVolumeMuteFill, BsFillVolumeUpFill } from 'react-icons/bs';
 import { FaSnowman, FaSnowboarding } from 'react-icons/fa';
-import { GiIceCube, GiIcePop, GiIceberg } from 'react-icons/gi';
+import { GiIceCube, GiIcePop, GiIceberg, GiLeatherVest } from 'react-icons/gi';
 import { RiFridgeFill, RiGithubFill } from 'react-icons/ri';
-import { CgArrowsExchangeAlt } from 'react-icons/cg';
 
 // eslint-disable-next-line react/jsx-key
 const icons = [<BsSnow />, <BsThermometerSnow />, <BsCloudSnowFill />, <FaSnowman />, <FaSnowboarding/>, <GiIceCube/>, <GiIcePop/>, <GiIceberg/>, <RiFridgeFill/>];
@@ -31,7 +32,8 @@ export default function Index() {
     setLottieOptions({
       loop: true,
       autoplay: true,
-      animationData: !window.matchMedia("(max-width: 560px)").matches ? snowAnimation : narrowSnowAnimation,
+      animationData: leavesAnimation,
+      // animationData: !window.matchMedia("(max-width: 560px)").matches ? snowAnimation : narrowSnowAnimation,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
       }
@@ -61,18 +63,18 @@ export default function Index() {
   const saveGuest = useCallback(async () => {
     try {
       if (name === "") throw new Error("Nome é obrigatório!");
-      setSubmitted(true);
       await addDoc(collection(db, 'friaca'), {
         confirmed: Timestamp.now(),
         name: name,
         instagram: instagram.replace("@", "")
       })
+      setSubmitted(true);
       setName("");
       setInstagram("");
     } catch (err) {
       alert(err)
     }
-  }, [name, instagram, videoRef]);
+  }, [name, instagram]);
 
   const changeInstagram = useCallback((e) => {
     const newIg = e.target.value;
@@ -102,9 +104,9 @@ export default function Index() {
           <p>Victor Hugo</p>
         </div>
         <div className={styles.right__when}>
-          <p className={styles.right__when__date}>16<br/><span>OUT</span></p>
+          <p className={styles.right__when__date}>15<br/><span>JAN</span></p>
           <span className="hollow">AS</span>
-          <p className={styles.right__when__time}>14<span>H</span></p>
+          <p className={styles.right__when__time}>15<span>H</span></p>
         </div>
         <a href="https://www.google.com.br/maps/place/Casa+das+Poc+Produções+Criativas/@-3.7444096,-38.5428548,17z/data=!3m1!4b1!4m5!3m4!1s0x7c7490eac820b21:0x7bda151c5e7d98f0!8m2!3d-3.7444091!4d-38.5406554" 
           className={styles.right__where}

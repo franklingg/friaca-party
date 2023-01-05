@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app"
 import {getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDtVdsh3VCaE9klsnURKH9zUgW2aeYMT8s",
-    authDomain: "despedida-ap.firebaseapp.com",
-    projectId: "despedida-ap",
-    storageBucket: "despedida-ap.appspot.com",
-    messagingSenderId: "381264971295",
-    appId: "1:381264971295:web:9b19beb834d912e76d772a"
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APP_ID
 };
 
 // Initialize Firebase and Firestore

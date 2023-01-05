@@ -1,5 +1,5 @@
 .home {
-    background-color: var(--black);
+    background-color: var(--brown);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -90,7 +90,7 @@
 }
 
 .left__confirmation{
-    background: linear-gradient(239.94deg, #1E1E1E 10.45%, #2F2F35 69.95%);
+    background: linear-gradient(239.94deg, var(--light-brown) 10.45%, var(--light-brown) 69.95%);
     font-family: Poppins;
     padding: 2vw;
     border-radius: 10px;
@@ -153,6 +153,7 @@
     align-items: center;
     gap: 2vh;
     max-width: 35vw;
+    min-width: 27vw;
 
     h2 {
         font-size: 2rem;
