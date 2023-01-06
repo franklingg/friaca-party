@@ -5,9 +5,7 @@ import { collection, query, orderBy, onSnapshot, addDoc, Timestamp } from 'fireb
 import { db } from '~/service/firebase';
 import * as snowAnimation from '~/assets/animations/let-it-snow.json';
 import * as narrowSnowAnimation from '~/assets/animations/snowfall.json';
-import * as leavesAnimation from '~/assets/animations/leaves.json';
-// import Logo from '~/assets/img/logo.svg';
-import Logo from '~/assets/img/logo.png';
+import Logo from '~/assets/img/logo.svg';
 import Image from 'next/image';
 import { BsSnow, BsThermometerSnow, BsCloudSnowFill, BsFillVolumeMuteFill, BsFillVolumeUpFill } from 'react-icons/bs';
 import { FaSnowman, FaSnowboarding } from 'react-icons/fa';
@@ -32,8 +30,7 @@ export default function Index() {
     setLottieOptions({
       loop: true,
       autoplay: true,
-      animationData: leavesAnimation,
-      // animationData: !window.matchMedia("(max-width: 560px)").matches ? snowAnimation : narrowSnowAnimation,
+      animationData: !window.matchMedia("(max-width: 560px)").matches ? snowAnimation : narrowSnowAnimation,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
       }
